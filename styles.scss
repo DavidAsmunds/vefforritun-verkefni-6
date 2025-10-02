@@ -1,0 +1,18 @@
+/**
+ * Grunn sass skrá, sækir aðrar skrár í *réttri* röð.
+ * Sjá skjölun í hverri skrá fyrir sig.
+ */
+@use "styles/config";
+
+// TODO bæta við fleiri skrám eftir þörfum
+
+@use "styles/grid";
+@use "styles/reset";
+@use "styles/base";
+@use "styles/utils";
+@use "styles/components/header";
+@use "styles/components/footer";
+@use "styles/components/nav";
+@use "styles/components/card";
+@use "styles/components/form";
+@use "styles/components/intro";

@@ -1,6 +1,6 @@
 /* https://css-tricks.com/building-css-grid-overlay/ */
 :root {
-  --grid-color: hsla(255, 75%, 75%, 0.25);
+  --grid-color: hsl(255deg 75% 75% / 25%);
   --grid-repeating-width: calc(100% / var(--columns));
   --grid-column-width: calc((100% / var(--columns)) - var(--gutter));
   --grid-background-width: calc(100% + var(--gutter));
@@ -18,22 +18,16 @@ html {
 }
 
 html::before {
-  content: "";
-
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  margin-right: auto;
-  margin-left: auto;
-
+  inset: 0;
+  z-index: 1000;
   width: calc(100% - (2 * var(--offset)));
   max-width: var(--max-width);
   min-height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+  pointer-events: none;
+  content: "";
   background-image: var(--grid-background-columns);
   background-size: var(--grid-background-width) 100%;
-  z-index: 1000;
-  pointer-events: none;
 }

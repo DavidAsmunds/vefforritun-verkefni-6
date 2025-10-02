@@ -1,0 +1,40 @@
+/** Forsíða inngangsmynd **/
+
+.intro {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: calc(100vh - var(--height-nav));
+  margin-top: 0;
+  color: var(--color-background-primary);
+  background-image: url("./myndir/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.intro .protection {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: var(--color-protection);
+}
+
+.intro .content {
+  position: relative;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-size: 2em;
+}
+
+.intro .content h1 {
+  margin-top: calc(var(--spacing) * -4);
+}
+
+.intro .content h1,
+.intro .content h2 {
+  margin-bottom: calc(var(--spacing) * 4);
+}
